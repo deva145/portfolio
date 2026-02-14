@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="nav">
+        <h1>Deva</h1>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hero" id="home">
+        <div class="hero-main">
+            <h1>Full Stack <span class="name">Java</span> Developer</h1>
+            <p>I build applications, break systems to understand them, and focus on writing secure code.</p>
+
+            <div class="btn">
+                <a href="#projects" class="primary-btn">View Projects</a>
+                <a href="Deva_res.pdf" download class="secondary-btn">Download Resume</a>
+            </div>
+        </div>
+
+        <img src="profile2.png" class="hero-image" alt="Deva">
+    </div>
+
+    <div class="about reveal" id="about">
+        <div class="about-content reveal">
+            <h2>About</h2>
+            <p>I enjoy building software and breaking it to understand how to secure it.</p>
+            <p>
+                I have completed my BCA and am currently learning Java Full Stack development.
+                Alongside development, I explore ethical hacking concepts like web vulnerabilities
+                and system security.
+            </p>
+            <p>I prefer understanding systems deeply rather than memorizing tools.</p>
+        </div>
+
+        <div class="about-card reveal">
+            <span>📍 Location: Chennai</span>
+            <span>🎓 Degree: BCA</span>
+            <span>🎯 Goal: Secure Developer</span>
+        </div>
+    </div>
+
+    <div class="skills" id="skills">
+        <h2 class="reveal">Skills</h2>
+
+        <div class="skills-pills">
+            <span class="skill-pill reveal">Java</span>
+            <span class="skill-pill reveal">Spring Boot</span>
+            <span class="skill-pill reveal">Spring Security</span>
+            <span class="skill-pill reveal">HTML</span>
+            <span class="skill-pill reveal">CSS</span>
+            <span class="skill-pill reveal">Python</span>
+            <span class="skill-pill reveal">MySQL</span>
+            <span class="skill-pill reveal">Certified Ethical Hacking</span>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <h2 class="reveal">Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card reveal">
+                <h3>Course Management System</h3>
+                <p class="tech">Java · Spring Boot · Spring Security</p>
+                <p>
+                    A web-based application to manage courses, students, and enrollments.
+                    Focused on CRUD operations, authentication, and clean backend structure.
+                </p>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Bus Reservation System</h3>
+                <p class="tech">Java · MySQL</p>
+                <p>
+                    Application for managing bus schedules, seat availability, and ticket
+                    reservations with database-backed operations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="education" id="education">
+        <h2 class="reveal">Education</h2>
+
+        <div class="education-strip reveal">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p class="college">A.M. Jain College · Chennai</p>
+            <p class="duration">2022 – 2025</p>
+        </div>
+    </div>
+
+    <div class="contact reveal" id="contact">
+        <h2>Contact</h2>
+        <p class="contact-text">
+            Feel free to reach out for opportunities, collaborations, or discussions.
+        </p>
+
+        <div class="contact-list">
+            <a href="mailto:devanandan.a11c@gmail.com" class="contact-item">
+                📧 devanandan.a11c@gmail.com
+            </a>
+
+            <div class="contact-item">
+                📍 Chennai, India
+            </div>
+
+            <a href="https://github.com/" target="_blank" class="contact-item">
+                💻 GitHub
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Deva.</p>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        revealOnScroll();
+        window.addEventListener("scroll", revealOnScroll);
+    </script>
+
+</body>
+</html>
